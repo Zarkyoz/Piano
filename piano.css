@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    background: black;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: solid green;
+}
+header{
+    height: 20%;
+    border: solid yellow;
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    border: solid red;
+}
+.touchePiano{
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    margin-left: 0.5% ;
+    margin-right: 0.5%;
+    width: 11%;
+    height: 100%;
+    background-color: grey;
+    font-size: 200%;
+    color: purple;
+}
