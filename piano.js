@@ -65,14 +65,14 @@ btnDo2.appendChild(do2)
 
 
 
-btnDo1.addEventListener('mousedown', function(){do1.play()})
-btnRe1.addEventListener('mousedown', function(){re1.play()})
-btnMi.addEventListener('mousedown', function(){mi.play()})
-btnFa.addEventListener('mousedown', function(){fa.play()})
-btnSol.addEventListener('mousedown', function(){sol.play()})
-btnLa.addEventListener('mousedown', function(){la.play()})
-btnSi.addEventListener('mousedown', function(){si.play()})
-btnDo2.addEventListener('mousedown', function(){do2.play()})
+btnDo1.addEventListener('click', function(){do1.play()})
+btnRe1.addEventListener('click', function(){re1.play()})
+btnMi.addEventListener('click', function(){mi.play()})
+btnFa.addEventListener('click', function(){fa.play()})
+btnSol.addEventListener('click', function(){sol.play()})
+btnLa.addEventListener('click', function(){la.play()})
+btnSi.addEventListener('click', function(){si.play()})
+btnDo2.addEventListener('click', function(){do2.play()})
 
 btnDo1.addEventListener('mouseup', function(){do1.pause(); do1.currentTime = 0;})
 btnRe1.addEventListener('mouseup', function(){re1.pause(); re1.currentTime = 0 ;})
@@ -84,78 +84,78 @@ btnSi.addEventListener('mouseup', function(){si.pause(); si.currentTime = 0 ;})
 btnDo2.addEventListener('mouseup', function(){do2.pause(); do2.currentTime = 0 ;})
 
 
-window.addEventListener('keydown', function(noteMusique){
-    switch (noteMusique.key){
+// window.addEventListener('keydown', function(noteMusique){
+//     switch (noteMusique.key){
         
-        case "q":
-            do1.play()
-            break;
-        case "s":
-            re1.play()
-        break;
-        case "d":
-            mi.play()
-        break;
-        case "f":
-            fa.play()
-        break;
-        case "g":
-            sol.play()
-        break;
-        case "h":
-            la.play()
-        break;
-        case "j":
-            si.play()
-        break;
-        case "k":
-            do2.play()
-        break;
+//         case "q":
+//             do1.play()
+//             break;
+//         case "s":
+//             re1.play()
+//         break;
+//         case "d":
+//             mi.play()
+//         break;
+//         case "f":
+//             fa.play()
+//         break;
+//         case "g":
+//             sol.play()
+//         break;
+//         case "h":
+//             la.play()
+//         break;
+//         case "j":
+//             si.play()
+//         break;
+//         case "k":
+//             do2.play()
+//         break;
 
-            default:
-    }
-})
-//son.currentTime=0; remet la musique a zero
-window.addEventListener('keyup', function(stopMusique){
-    switch (stopMusique.key){
+//             default:
+//     }
+// })
+// //son.currentTime=0; remet la musique a zero
+// window.addEventListener('keyup', function(stopMusique){
+//     switch (stopMusique.key){
         
-        case "q":
-            do1.pause()
-            do1.currentTime = 0;
-            break;
-        case "s":
-            re1.pause()
-            re1.currentTime = 0;
-        break;
-        case "d":
-            mi.pause()
-            mi.currentTime = 0;
-        break;
-        case "f":
-            fa.pause()
-            fa.currentTime = 0;
-        break;
-        case "g":
-            sol.pause()
-            sol.currentTime = 0;
-        break;
-        case "h":
-            la.pause()
-            la.currentTime = 0;
-        break;
-        case "j":
-            si.pause()
-            si.currentTime = 0;
-        break;
-        case "k":
-            do2.pause()
-            do2.currentTime = 0;
-        break;
+//         case "q":
+//             do1.pause()
+//             do1.currentTime = 0;
+//             break;
+//         case "s":
+//             re1.pause()
+//             re1.currentTime = 0;
+//         break;
+//         case "d":
+//             mi.pause()
+//             mi.currentTime = 0;
+//         break;
+//         case "f":
+//             fa.pause()
+//             fa.currentTime = 0;
+//         break;
+//         case "g":
+//             sol.pause()
+//             sol.currentTime = 0;
+//         break;
+//         case "h":
+//             la.pause()
+//             la.currentTime = 0;
+//         break;
+//         case "j":
+//             si.pause()
+//             si.currentTime = 0;
+//         break;
+//         case "k":
+//             do2.pause()
+//             do2.currentTime = 0;
+//         break;
 
             
-            default:
-    }
-})
+//             default:
+//     }
+// })
 
 // btnDo1
 // btnRe1
