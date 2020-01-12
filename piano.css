@@ -6,6 +6,7 @@
 }
 
 body{
+    width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -14,10 +15,58 @@ body{
     border: solid green;
 }
 header{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    /* margin: 0; */
+    padding: 10px;
+    padding-bottom: 20px;
     height: 20%;
+    width: 100%;
+    background: black;
     border: solid yellow;
 }
+header hr{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20%;
+    background: black;
+}
+article{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+}
+.note{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: none;
+    height: 30%;
+    width: 5%;
+   
+    /* animation-name: cleSol ;
+    animation-duration: 3s; */
+}
+/* @keyframes cleSol{
+    0%{
+        opacity: 1;
+        left: 0%;
+    }
+    75%{
+        opacity: 1;
+        left: 80%; 
+    }
+    100%{
+        opacity: 0;
+        left: 95%;
+    }
+} */
 main{
+    width: 100%;
     height: 80%;
     display: flex;
     flex-direction: row;
@@ -29,12 +78,27 @@ main{
     border-bottom-right-radius: 20%;
     margin-left: 0.5% ;
     margin-right: 0.5%;
-    width: 12%;
-    height: 100%;
-    background-color:white;
+    width: 11.5%;
+    height:90%;
+    /* background-color:white; */
     font-size: 200%;
-    color: purple;
+    color: white;
 }
-.touchePiano:active{
-    background-color: red;
-}
+
+#noteDo1{background-color: white ; color: black;}
+#noteRe1{background-color: red ;}
+#noteMi{background-color: orange ;}
+#noteFa{background-color: yellow ;}
+#noteSol{background-color: green ;}
+#noteLa{background-color: rgb(0, 204, 255);}
+#noteSi{background-color: rgb(0, 0, 255);}
+#noteDo2{background-color: purple;}
+
+#noteDo1:active{background-color: black; color: white;}
+#noteRe1:active{background-color: black; color: white;}
+#noteMi:active{background-color: black; color: white;}
+#noteFa:active{background-color: black; color: white;}
+#noteSol:active{background-color: black; color: white;}
+#noteLa:active{background-color: black; color: white;}
+#noteSi:active{background-color: black; color: white;}
+#noteDo2:active{background-color: black; color: white;}
