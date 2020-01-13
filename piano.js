@@ -1,6 +1,6 @@
 var body = document.querySelector('body');
 var header = document.createElement('header');
-var main = document.createElement('main');
+var main = document.querySelector('main');
 var article1 = document.createElement('article')
 
 body.appendChild(header);
@@ -63,30 +63,58 @@ main.appendChild(btnSol)
 main.appendChild(btnLa)
 main.appendChild(btnSi)
 main.appendChild(btnDo2)
+var carre = 0
 
+var do1 = new Audio("son/piano/do1.mp3")
+var re1 = new Audio("son/piano/re1.mp3")
+var mi = new Audio("son/piano/mi.mp3")
+var fa = new Audio("son/piano/fa.mp3")
+var sol = new Audio("son/piano/sol.mp3")
+var la = new Audio("son/piano/la.mp3")
+var si = new Audio("son/piano/si.mp3")
+var do2 = new Audio("son/piano/do2.mp3")
+var choix;
+var selectInstrument = document.querySelector('select')
+selectInstrument.addEventListener('change', instru)
+function instru(){
+    
+    switch(selectInstrument.value){
+        case "piano":
+            do1 = new Audio("son/piano/do1.mp3")
+            re1 = new Audio("son/piano/re1.mp3")
+            mi = new Audio("son/piano/mi.mp3")
+            fa = new Audio("son/piano/fa.mp3")
+            sol = new Audio("son/piano/sol.mp3")
+            la = new Audio("son/piano/la.mp3")
+            si = new Audio("son/piano/si.mp3")
+            do2 = new Audio("son/piano/do2.mp3") 
+            choix = 1
+        break;
 
-var do1 = new Audio("son/do1.mp3")
-var re1 = new Audio("son/re1.mp3")
-var mi = new Audio("son/mi.mp3")
-var fa = new Audio("son/fa.mp3")
-var sol = new Audio("son/sol.mp3")
-var la = new Audio("son/la.mp3")
-var si = new Audio("son/si.mp3")
-var do2 = new Audio("son/do2.mp3")
+        case "pan":
+            do1 = new Audio("son/pan/do1.mp3")
+            re1 = new Audio("son/pan/re1.mp3")
+            mi = new Audio("son/pan/mi.mp3")
+            fa = new Audio("son/pan/fa.mp3")
+            sol = new Audio("son/pan/sol.mp3")
+            la = new Audio("son/pan/la.mp3")
+            si = new Audio("son/pan/si.mp3")
+            do2 = new Audio("son/pan/do2.mp3")
+            choix = 2
+        break;
+        default:
+    }
+}
 
+// btnDo1.appendChild(do1)
+// btnRe1.appendChild(re1)
+// btnMi.appendChild(mi)
+// btnFa.appendChild(fa)
+// btnSol.appendChild(sol)
+// btnLa.appendChild(la)
+// btnSi.appendChild(si)
+// btnDo2.appendChild(do2)
 
-
-btnDo1.appendChild(do1)
-btnRe1.appendChild(re1)
-btnMi.appendChild(mi)
-btnFa.appendChild(fa)
-btnSol.appendChild(sol)
-btnLa.appendChild(la)
-btnSi.appendChild(si)
-btnDo2.appendChild(do2)
-
-
-var colorDown = "white"
 var imageX = 20;
 var imageY = 20;
 var positionDepart = 1;
@@ -203,7 +231,7 @@ function Do2() {
 
 
 //Partie a resoudre
-
+//trouver comment ne pas utiliser cette partie pour les tablettes et telephones
 
 
 
@@ -219,18 +247,17 @@ function Do2() {
 //     btnSi.addEventListener('mousedown', function(){this.style.backgroundColor = "black"; this.style.color= "white";})
 //     btnDo2.addEventListener('mousedown', function(){this.style.backgroundColor = "black"; this.style.color= "white";})
     
-//     btnDo1.addEventListener('mouseup', function(){this.style.backgroundColor = "white"; this.style.color = "black";})
-//     btnRe1.addEventListener('mouseup', function(){this.style.backgroundColor = "red"; this.style.color = "white";})
-// btnMi.addEventListener('mouseup', function(){this.style.backgroundColor = "orange"; this.style.color = "white";})
-// btnFa.addEventListener('mouseup', function(){this.style.backgroundColor = "yellow"; this.style.color = "white";})
-// btnSol.addEventListener('mouseup', function(){this.style.backgroundColor = "green"; this.style.color = "white";})
-// btnLa.addEventListener('mouseup', function(){this.style.backgroundColor = "rgb(0, 204, 255)"; this.style.color = "white";})
-// btnSi.addEventListener('mouseup', function(){this.style.backgroundColor = "rgb(0, 0, 255)"; this.style.color = "white";})
-// btnDo2.addEventListener('mouseup', function(){this.style.backgroundColor = "purple"; this.style.color = "white";})
+//     btnDo1.addEventListener('mouseup', function(){do1.pause(); this.style.backgroundColor = "white"; this.style.color = "black";})
+//     btnRe1.addEventListener('mouseup', function(){re1.pause(); this.style.backgroundColor = "red"; this.style.color = "white";})
+// btnMi.addEventListener('mouseup', function(){mi.pause(); this.style.backgroundColor = "orange"; this.style.color = "white";})
+// btnFa.addEventListener('mouseup', function(){fa.pause(); this.style.backgroundColor = "yellow"; this.style.color = "white";})
+// btnSol.addEventListener('mouseup', function(){sol.pause(); this.style.backgroundColor = "green"; this.style.color = "white";})
+// btnLa.addEventListener('mouseup', function(){la.pause(); this.style.backgroundColor = "rgb(0, 204, 255)"; this.style.color = "white";})
+// btnSi.addEventListener('mouseup', function(){si.pause(); this.style.backgroundColor = "rgb(0, 0, 255)"; this.style.color = "white";})
+// btnDo2.addEventListener('mouseup', function(){do2.pause(); this.style.backgroundColor = "purple"; this.style.color = "white";})
 // }else{
 
 // }
-
 
 
 window.addEventListener('keydown', function (noteMusique) {
@@ -311,13 +338,18 @@ window.addEventListener('keyup', function (stopMusique) {
 
 
 
+//faire un if pourque cette fonction fonctionne seulement avet laflute de pan
+// voir egalement que cela fonctionne avec le click
+
 
 // window.addEventListener('keyup', function(stopMusique){
 //     switch (stopMusique.key){
-
+        
 //         case "q":
+//             if (choix==2){
 //             do1.pause();
 //             do1.currentTime = 0;
+//             }
 //             break;
 //         case "s":
 //             re1.pause()
