@@ -342,48 +342,48 @@ window.addEventListener('keyup', function (stopMusique) {
 // voir egalement que cela fonctionne avec le click
 
 
-// window.addEventListener('keyup', function(stopMusique){
-//     switch (stopMusique.key){
+window.addEventListener('keyup', function(stopMusique){
+    if (choix == 2){
+    switch (stopMusique.key){
         
-//         case "q":
-//             if (choix==2){
-//             do1.pause();
-//             do1.currentTime = 0;
-//             }
-//             break;
-//         case "s":
-//             re1.pause()
-//             re1.currentTime = 0;
-//         break;
-//         case "d":
-//             mi.pause()
-//             mi.currentTime = 0;
-//         break;
-//         case "f":
-//             fa.pause()
-//             fa.currentTime = 0;
-//         break;
-//         case "g":
-//             sol.pause()
-//             sol.currentTime = 0;
-//         break;
-//         case "h":
-//             la.pause()
-//             la.currentTime = 0;
-//         break;
-//         case "j":
-//             si.pause()
-//             si.currentTime = 0;
-//         break;
-//         case "k":
-//             do2.pause()
-//             do2.currentTime = 0;
-//         break;
+        case "q":
+            do1.pause();
+            // do1.currentTime = 0;
+            break;
+        case "s":
+            re1.pause()
+            re1.currentTime = 0;
+        break;
+        case "d":
+            mi.pause()
+            mi.currentTime = 0;
+        break;
+        case "f":
+            fa.pause()
+            fa.currentTime = 0;
+        break;
+        case "g":
+            sol.pause()
+            sol.currentTime = 0;
+        break;
+        case "h":
+            la.pause()
+            la.currentTime = 0;
+        break;
+        case "j":
+            si.pause()
+            si.currentTime = 0;
+        break;
+        case "k":
+            do2.pause()
+            do2.currentTime = 0;
+        break;
 
 
-//             default:
-//     }
-// })
+            default:
+            }
+    }
+})
 
 // btnDo1
 // btnRe1
